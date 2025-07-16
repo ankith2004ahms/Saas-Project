@@ -122,7 +122,7 @@ export default function Home() {
                     </span>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <Link href="#features" className="text-slate-300 hover:text-white">Pricing</Link>
+                    <Link href="#pricing" className="text-slate-300 hover:text-white">Pricing</Link>
                     <Link href="#features" className="text-slate-300 hover:text-white">Features</Link>
                     <UserButton afterSignOutUrl="/" />
                 </div>
@@ -380,7 +380,7 @@ export default function Home() {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+            <section id="pricing" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
