@@ -56,16 +56,16 @@ const FormListItem = ({jsonForm,formRecord,refreshData}:any) => {
          </AlertDialog>
 
         </div>
-       <h2 className='font-semibold text-slate-900 text-lg'> {jsonForm?.formTitle}</h2>
-       <h2 className='text-sm text-slate-600'> {jsonForm?.formHeading || jsonForm?.formSubheading}</h2>
+       <h2 className='font-semibold text-slate-900 text-lg'> {jsonForm?.formTitle || jsonForm?.formtitle}</h2>
+       <h2 className='text-sm text-slate-600'> {jsonForm?.formheading || jsonForm?.formSubheading || jsonForm?.formHeading}</h2>
        <hr className='my-4'></hr>
        <div className='flex gap-2 justify-between'>
 
         <RWebShare
         data={{
-          text: jsonForm?.formHeading || jsonForm?.formSubheading+'Build your form in seconds with AI form builder',
+          text: jsonForm?.formheading || jsonForm?.formHeading || jsonForm?.formSubheading+'Build your form in seconds with AI form builder',
           url: "https://saas-project-bice-two.vercel.app/dashboard3/aiform/"+formRecord?.id,
-          title: jsonForm?.formTitle,
+          title: jsonForm?.formtitle || jsonForm?.formTitle,
         }}
         onClick={() => console.log("shared successfully!")}
       >

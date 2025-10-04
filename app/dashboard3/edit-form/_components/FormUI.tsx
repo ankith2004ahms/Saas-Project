@@ -84,8 +84,8 @@ const FormUi = ({jsonForm,onFieldUpdate,deleteField,editable=true,formId=0}:any)
 
   return (
     <form ref={formRef} onSubmit={onFormSubmit} className='border-slate-950 border-r-8 border-b-4 shadow-md bg-white p-5 md:w-[700px] rounded-2xl'>
-      <h2 className='font-bold text-center text-2xl'>{jsonForm?.formTitle}</h2>
-      <h2 className='text-sm text-slate-600 text-center'>{jsonForm?.formHeading || jsonForm?.formSubheading}</h2>
+      <h2 className='font-bold text-center text-2xl'>{jsonForm?.formTitle || jsonForm?.formtitle}</h2>
+      <h2 className='text-sm text-slate-600 text-center'>{jsonForm?.formheading || jsonForm?.formHeading || jsonForm?.formSubheading}</h2>
      {(jsonForm?.formFields || jsonForm?.form)?.map((field:any,index:any)=>(
         <div key={index} className="flex items-center gap-2">
           
